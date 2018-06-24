@@ -11,6 +11,7 @@ public class ForecastItem {
 
     public String date;
     public String weather;
+    public String snow;
     public String temp;
 
 
@@ -18,20 +19,30 @@ public class ForecastItem {
         date = getDate(forecastList.getDtTxt());
         weather = forecastList.getWeather().get(0).getMain();
         temp = forecastList.getMain().getTemp() + "°";
+        try {
+            snow = getSnowfallRisk(forecastList.getSnow().get3h());
+        }
+        catch (NullPointerException e) {
+             snow = "Data Unavailable";
+        }
+
 
     }
 
     private String getSnowfallRisk(Double snowVol) {
         /*
-        0 – 1 mm/hr: Light
-        1-2.5 mm/hr: Moderate
-        > 2.5 mm/hr: Heavy
+        AMOFSG/7-IP/4 27/.6/08
+        The Experts at the WMO 1997 meeting suggested that the
+        LWE intensity for snowfall  could be defined as follows:
+        0 – 1 mm/hr:  Light
+        1- 5.0 mm/hr: Moderate
+        > 5.0 mm/hr:  Heavy
         */
         String snowFall;
-        double snowVolPerHr = snowVol/3;
-        if (snowVolPerHr > 0 && snowVolPerHr < 1){
+        double snowVolPerHr = snowVol/3;//As the API readings are for every 3 hrs
+        if (snowVolPerHr > 0 && snowVolPerHr < 1.0){
           snowFall = "Light";
-        }else if (snowVolPerHr >= 1 && snowVolPerHr < 2.5){
+        }else if (snowVolPerHr >= 1.0 && snowVolPerHr < 5.0){
             snowFall = "Moderate";
         }else {
             snowFall = "High";

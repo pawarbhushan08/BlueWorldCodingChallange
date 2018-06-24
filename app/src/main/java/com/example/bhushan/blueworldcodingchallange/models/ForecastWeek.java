@@ -1,4 +1,3 @@
-
 package com.example.bhushan.blueworldcodingchallange.models;
 
 import com.google.gson.annotations.Expose;

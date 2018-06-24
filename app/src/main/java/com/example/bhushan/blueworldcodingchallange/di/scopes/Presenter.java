@@ -1,6 +1,5 @@
 package com.example.bhushan.blueworldcodingchallange.di.scopes;
 
-
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 

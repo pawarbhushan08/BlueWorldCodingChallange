@@ -85,7 +85,7 @@ public class StartActivity extends MvpAppCompatActivity implements StartView {
     @Override
     public void showHistory(ArrayList<String> cities) {
         if(cities.size() > 0) {
-            findViewById(R.id.resent_locations_text).setVisibility(View.VISIBLE);
+            findViewById(R.id.recent_locations_text).setVisibility(View.VISIBLE);
         }
 
         for (int i = 0; i < cities.size(); i ++) {

@@ -202,6 +202,8 @@ public class HomeActivity extends MvpAppCompatActivity implements HomeView {
             ((TextView) forecastView.findViewById(R.id.date)).setText(forecast.date);
             ((TextView) forecastView.findViewById(R.id.description)).setText(forecast.weather);
             ((TextView) forecastView.findViewById(R.id.temp)).setText(forecast.temp);
+            ((TextView) forecastView.findViewById(R.id.snow)).setText(forecast.snow);
+            //snow will show Data unavailable if getSnow is null in API
 
             weekForecast.addView(forecastView);
         }

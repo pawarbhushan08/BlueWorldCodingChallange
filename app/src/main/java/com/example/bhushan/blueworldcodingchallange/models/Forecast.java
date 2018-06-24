@@ -1,4 +1,3 @@
-
 package com.example.bhushan.blueworldcodingchallange.models;
 
 import com.google.gson.annotations.Expose;
@@ -44,6 +43,10 @@ public class Forecast {
     @SerializedName("cod")
     @Expose
     private Integer cod;
+    @SerializedName("snow")
+    @Expose
+    private Snow snow;
+
 
     public Coord getCoord() {
         return coord;
@@ -140,4 +143,5 @@ public class Forecast {
     public void setCod(Integer cod) {
         this.cod = cod;
     }
+
 }

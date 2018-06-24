@@ -1,4 +1,3 @@
-
 package com.example.bhushan.blueworldcodingchallange.models;
 
 import com.google.gson.annotations.Expose;
@@ -30,6 +29,9 @@ public class ForecastList {
     @SerializedName("rain")
     @Expose
     private Rain rain;
+    @SerializedName("snow")
+    @Expose
+    private Snow snow;
 
     public Integer getDt() {
         return dt;
@@ -93,5 +95,13 @@ public class ForecastList {
 
     public void setRain(Rain rain) {
         this.rain = rain;
+    }
+
+    public Snow getSnow() {
+        return snow;
+    }
+
+    public void setSnow(Snow snow) {
+        this.snow = snow;
     }
 }

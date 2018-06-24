@@ -2,7 +2,7 @@
     <string name="app_name">BlueWorldCodingChallange</string>
     <string name="weather_icon">Weather icon</string>
     <string name="done">Done</string>
-    <string name="city_name_hint">City name e.g. Moscow</string>
+    <string name="city_name_hint">City name e.g. Berlin</string>
     <string name="set_location">Set location</string>
     <string name="visibility">Visibility</string>
     <string name="sunset">Sunset</string>
@@ -14,4 +14,6 @@
     <string name="wind_value">%dM/S</string>
     <string name="pressure_value">%dHPA</string>
     <string name="visibility_value">%dKM</string>
+    <string name="snowfall">Snowfall</string>
+    <string name="search">Search</string>
 </resources>

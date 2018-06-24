@@ -42,7 +42,7 @@
 
     <TextView
         android:visibility="invisible"
-        android:id="@+id/resent_locations_text"
+        android:id="@+id/recent_locations_text"
         android:text="@string/recent_locations"
         android:textColor="@color/colorLight"
         android:layout_width="wrap_content"

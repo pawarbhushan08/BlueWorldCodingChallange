@@ -35,6 +35,15 @@
         android:layout_margin="16dp"
         android:textColor="@color/colorLight"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/snow"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/snow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/colorLight"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
